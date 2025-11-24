@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enoughSudhanshu</title>
-    <meta name="description" content="Enoughsudhanshu(Sudhanshu Pandey) - BTech CSE Student, Full-Stack Developer, and Content Creator. Interactive  portfolio showcasing projects, skills, and achievements.">
+    <title>enoughsudhanshu</title>
+    <meta name="description" content="enoughsudhanshu(Sudhanshu Pandey) - BTech CSE Student, Full-Stack Developer, and Content Creator. Interactive  portfolio showcasing projects, skills, and achievements.">
     <style>
         :root {
             --color-bg-primary: #0a0e27;
@@ -600,7 +600,18 @@
 
 
             </div>
-            <h1>Enoughsudhanshu(Sudhanshu Pandey)</h1>
+            <h1 id="animated-name"></h1>
+<script>
+  const names = ["Enoughsudhanshu", "Sudhanshu Pandey"];
+  let current = 0;
+  const nameElement = document.getElementById("animated-name");
+  function showName() {
+    nameElement.textContent = names[current];
+    current = (current + 1) % names.length;
+  }
+  showName();
+  setInterval(showName, 2000);
+</script>
             <p class="tagline">BTech CSE Student | Full-Stack Developer | Problem Solver</p>
             <p class="bio">
                 Passionate third-year Computer Science student at AKTU University specializing in web development,
