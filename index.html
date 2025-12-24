@@ -7,12 +7,12 @@
 <title>Enough Sudhanshu | Full Stack Software Developer & Automation Engineer</title>
 
 <meta name="description"
-content="Enough Sudhanshu (also known as Enough, Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer building ERP systems, automation tools, and backend platforms using Flask, Python, Java, C/C++, and SQL.">
+content="Enough Sudhanshu (also known as Enough, Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer building ERP systems, automation tools and backend platforms using Flask, Python, Java, C/C++ and SQL.">
 
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="ySfk0JBwjkJQ3SknoNVHux7rdX8moAI40TIHa0-d1qg">
 
-<!-- ========= PERSON SCHEMA (CRITICAL FOR GOOGLE LENS) ========= -->
+<!-- ===== PERSON SCHEMA (GOOGLE + LENS) ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,19 +60,30 @@ body{
 .container{max-width:1300px;margin:auto;padding:20px}
 header{text-align:center;padding:80px 20px}
 
-.photo-grid{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+.profile-box{
+  position:relative;
+  display:inline-block;
   margin-bottom:30px;
 }
-.photo-grid img{
-  width:160px;height:160px;
+.profile-image{
+  width:180px;
+  height:180px;
   border-radius:50%;
-  border:4px solid var(--accent);
-  box-shadow:0 0 30px rgba(0,217,255,.5);
+  object-fit:cover;
+  border:5px solid var(--accent);
+  box-shadow:0 0 40px rgba(0,217,255,.6);
+  transition:opacity .8s ease-in-out;
 }
+.ring{
+  position:absolute;
+  top:-15px;left:-15px;
+  width:210px;height:210px;
+  border:2px solid var(--accent);
+  border-top-color:transparent;
+  border-radius:50%;
+  animation:spin 4s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 h1{
   font-size:3.4rem;
@@ -81,8 +92,7 @@ h1{
   -webkit-text-fill-color:transparent;
 }
 .tagline{color:var(--muted);font-size:1.3rem;margin:15px 0}
-.bio{max-width:750px;margin:auto;color:var(--muted);line-height:1.8}
-
+.bio{max-width:760px;margin:auto;color:var(--muted);line-height:1.8}
 .alias{margin-top:10px;font-size:14px;opacity:.8}
 
 .resume-btn{
@@ -149,11 +159,13 @@ footer a{color:var(--accent)}
 
 <header>
 
-<!-- ===== OFFICIAL IMAGE SET (ONLY THESE) ===== -->
-<div class="photo-grid">
-  <img src="enough-sudhanshu.jpg" alt="Enough Sudhanshu Full Stack Developer">
-  <img src="enough-sudhanshu-1.jpg" alt="Enough Sudhanshu Software Engineer">
-  <img src="enough-sudhanshu-2.jpg" alt="Enough Sudhanshu Automation Engineer">
+<!-- ===== HERO IMAGE (AUTO CHANGE) ===== -->
+<div class="profile-box">
+  <div class="ring"></div>
+  <img id="heroImage"
+       src="enough-sudhanshu.jpg"
+       alt="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) Full Stack Software Developer"
+       class="profile-image">
 </div>
 
 <h1>Enough Sudhanshu</h1>
@@ -164,7 +176,7 @@ Full Stack Software Developer & Automation Engineer
 
 <p class="bio">
 B.Tech CSE student focused on building real-world ERP systems,
-automation tools, and backend platforms using Flask, Python,
+automation tools and backend platforms using Flask, Python,
 Java, C/C++, SQL and logic-driven AI-free systems.
 </p>
 
@@ -193,52 +205,40 @@ Also known as Enough, Enough Coder, Sudhanshu Pandey
 </div>
 </section>
 
-<!-- ===== PROJECTS (ALL IN ONE PAGE) ===== -->
+<!-- ===== PROJECTS (ALL LINKS ONE PAGE) ===== -->
 <section>
 <h2>Projects & Case Studies</h2>
 <div class="grid">
 
 <div class="card">
 <h3>School ERP Management System</h3>
-<p>
-Complete ERP for schools including students, fees, attendance,
-reports and role-based access.
-</p>
+<p>Complete ERP for schools including students, fees, attendance and reports.</p>
 <a class="project-link" href="https://github.com/enoughsudhanshu" target="_blank">
-View Case Study →
+View Project →
 </a>
 </div>
 
 <div class="card">
 <h3>Billing & Invoice Management System</h3>
-<p>
-Billing software with customer management, invoices,
-payment tracking and PDF generation.
-</p>
+<p>Billing software with invoices, customer records and PDF generation.</p>
 <a class="project-link" href="https://github.com/enoughsudhanshu" target="_blank">
-View Case Study →
+View Project →
 </a>
 </div>
 
 <div class="card">
 <h3>AI-Free Resume Shortlisting System</h3>
-<p>
-Rule-based resume filtering system without black-box AI,
-focused on transparency and fairness.
-</p>
+<p>Transparent rule-based resume filtering without black-box AI.</p>
 <a class="project-link" href="https://github.com/enoughsudhanshu" target="_blank">
-View Case Study →
+View Project →
 </a>
 </div>
 
 <div class="card">
 <h3>Automation Tool Suite</h3>
-<p>
-Custom Python tools to automate repetitive tasks,
-data processing and system workflows.
-</p>
+<p>Custom Python tools to automate repetitive development tasks.</p>
 <a class="project-link" href="https://github.com/enoughsudhanshu" target="_blank">
-View Case Study →
+View Project →
 </a>
 </div>
 
@@ -261,5 +261,29 @@ enoughsudhanshu@gmail.com
 </footer>
 
 </div>
+
+<!-- ===== HERO IMAGE AUTO CHANGE SCRIPT ===== -->
+<script>
+const heroImages = [
+  "enough-sudhanshu.jpg",
+  "enough-sudhanshu-1.jpg",
+  "enough-sudhanshu-2.jpg"
+];
+
+let imgIndex = 0;
+const heroImg = document.getElementById("heroImage");
+
+setInterval(() => {
+  heroImg.style.opacity = 0;
+
+  setTimeout(() => {
+    imgIndex = (imgIndex + 1) % heroImages.length;
+    heroImg.src = heroImages[imgIndex];
+    heroImg.style.opacity = 1;
+  }, 400);
+
+}, 4000);
+</script>
+
 </body>
 </html>
