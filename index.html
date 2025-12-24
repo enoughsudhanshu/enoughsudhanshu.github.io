@@ -7,17 +7,22 @@
 <title>Enough Sudhanshu | Full Stack Software Developer</title>
 
 <meta name="description"
-content="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer skilled in Flask, Python, Java, C/C++, SQL, ERP systems and automation.">
+content="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer skilled in Python, Flask, Java, C/C++, SQL, ERP systems, automation and problem solving.">
 
 <meta name="robots" content="index, follow">
 
-<!-- PERSON SCHEMA -->
+<!-- ===== PERSON SCHEMA ===== -->
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"Person",
  "name":"Enough Sudhanshu",
- "alternateName":["Enough","Enough Coder","Sudhanshu Pandey","enoughsudhanshu"],
+ "alternateName":[
+  "Enough",
+  "Enough Coder",
+  "Sudhanshu Pandey",
+  "enoughsudhanshu"
+ ],
  "jobTitle":"Full Stack Software Developer",
  "image":[
   "https://enoughsudhanshu.github.io/enough-sudhanshu.jpg",
@@ -32,6 +37,7 @@ content="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) – Full Stack Softwa
   "https://instagram.com/enoughsudhanshu",
   "https://leetcode.com/enoughsudhanshu",
   "https://hackerrank.com/enoughsudhanshu",
+  "https://auth.geeksforgeeks.org/user/enoughsudhanshu",
   "https://codechef.com/users/enoughsudhanshu",
   "https://peerlist.io/enoughsudhanshu"
  ]
@@ -55,31 +61,25 @@ body{
 }
 .container{max-width:1400px;margin:auto;padding:30px}
 
-/* ===== HERO FIXED ===== */
+/* ===== HERO ===== */
 header{text-align:center;padding:90px 20px}
 .hero-wrap{
  position:relative;
- width:200px;
- height:200px;
+ width:200px;height:200px;
  margin:0 auto 35px;
 }
 .hero-img{
- width:100%;
- height:100%;
+ width:100%;height:100%;
  border-radius:50%;
  object-fit:cover;
  border:4px solid var(--neon);
  background:#000;
- image-rendering:auto;
  box-shadow:0 0 18px rgba(0,234,255,.6);
  transition:opacity .8s ease;
 }
-
-/* ring OUTSIDE image (no blur on face) */
 .hero-wrap::after{
  content:"";
- position:absolute;
- inset:-14px;
+ position:absolute;inset:-14px;
  border-radius:50%;
  border:2px solid var(--neon2);
  animation:spin 8s linear infinite;
@@ -107,6 +107,7 @@ h1{
 /* ===== SECTIONS ===== */
 section{margin:110px 0}
 h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
+
 .grid{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -126,29 +127,30 @@ h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
 .card h3{margin-bottom:10px}
 .card p{color:var(--muted)}
 
-/* ===== CERTIFICATE GALLERY ===== */
+/* ===== CERTIFICATE PDF GALLERY ===== */
 .cert-grid{
  display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
  gap:35px;
 }
 .cert{
  background:linear-gradient(160deg,#0f172a,#020617);
- border:1px solid rgba(0,234,255,.3);
+ border:1px solid rgba(0,234,255,.35);
  border-radius:18px;
- padding:16px;
+ padding:14px;
  cursor:pointer;
  transition:.4s;
 }
 .cert:hover{
- transform:translateY(-12px) scale(1.04);
+ transform:translateY(-10px) scale(1.03);
  box-shadow:0 0 55px rgba(0,234,255,.45);
 }
-.cert img{
+.cert object{
  width:100%;
- height:170px;
- object-fit:cover;
+ height:180px;
  border-radius:12px;
+ pointer-events:none;
+ background:#000;
 }
 .cert h4{
  margin-top:12px;
@@ -175,13 +177,14 @@ h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
  padding:10px 18px;border-radius:30px;
  background:linear-gradient(135deg,var(--neon),var(--neon2));
  color:#001018;font-weight:800;
- text-decoration:none;cursor:pointer;
+ cursor:pointer;
 }
 
 .platforms a{
  display:inline-block;margin:6px 10px;
  color:var(--neon);text-decoration:none;font-weight:600;
 }
+
 footer{text-align:center;padding:70px 20px;color:var(--muted)}
 footer a{color:var(--neon)}
 </style>
@@ -192,8 +195,7 @@ footer a{color:var(--neon)}
 
 <header>
 <div class="hero-wrap">
- <img id="heroImage"
-      src="enough-sudhanshu.jpg"
+ <img id="heroImage" src="enough-sudhanshu.jpg"
       class="hero-img"
       alt="Enough Sudhanshu Full Stack Software Developer">
 </div>
@@ -229,28 +231,44 @@ backend platforms using Python, Flask, Java, C/C++, SQL and strong DSA fundament
 <h2>Certifications & Achievements</h2>
 <div class="cert-grid">
 
+<div class="cert" onclick="openCert('programming foundation by linkedin learning.pdf')">
+<object data="programming foundation by linkedin learning.pdf#page=1"></object>
+<h4>Programming Foundations – LinkedIn Learning</h4>
+</div>
+
 <div class="cert" onclick="openCert('innovilla-internship.pdf')">
-<img src="cert-thumbs/innovilla.jpg"><h4>Innovilla Internship</h4>
+<object data="innovilla-internship.pdf#page=1"></object>
+<h4>Innovilla Internship</h4>
 </div>
 
 <div class="cert" onclick="openCert('JavaScript-Algorithms-and-Data-Structures-Beta.pdf')">
-<img src="cert-thumbs/js-dsa.jpg"><h4>JavaScript DSA</h4>
+<object data="JavaScript-Algorithms-and-Data-Structures-Beta.pdf#page=1"></object>
+<h4>JavaScript Algorithms & DSA</h4>
 </div>
 
 <div class="cert" onclick="openCert('From-Analysing-Data-To-Creating-ML-Models.pdf')">
-<img src="cert-thumbs/ml.jpg"><h4>ML Fundamentals</h4>
+<object data="From-Analysing-Data-To-Creating-ML-Models.pdf#page=1"></object>
+<h4>ML: Data to Models</h4>
 </div>
 
 <div class="cert" onclick="openCert('Master-Frontend-to-Backend.pdf')">
-<img src="cert-thumbs/fullstack.jpg"><h4>Full Stack</h4>
+<object data="Master-Frontend-to-Backend.pdf#page=1"></object>
+<h4>Master Frontend to Backend</h4>
 </div>
 
 <div class="cert" onclick="openCert('DOC-20241031-WA0005.pdf')">
-<img src="cert-thumbs/namastejs.jpg"><h4>Namaste JavaScript</h4>
+<object data="DOC-20241031-WA0005.pdf#page=1"></object>
+<h4>Namaste JavaScript</h4>
 </div>
 
 <div class="cert" onclick="openCert('Product-Management.pdf')">
-<img src="cert-thumbs/product.jpg"><h4>Product Management</h4>
+<object data="Product-Management.pdf#page=1"></object>
+<h4>Product Management</h4>
+</div>
+
+<div class="cert" onclick="openCert('Master-Data-Management-for-Beginners.pdf')">
+<object data="Master-Data-Management-for-Beginners.pdf#page=1"></object>
+<h4>Master Data Management</h4>
 </div>
 
 </div>
@@ -263,6 +281,7 @@ backend platforms using Python, Flask, Java, C/C++, SQL and strong DSA fundament
 <a href="https://linkedin.com/in/enoughsudhanshu">LinkedIn</a>
 <a href="https://leetcode.com/enoughsudhanshu">LeetCode</a>
 <a href="https://hackerrank.com/enoughsudhanshu">HackerRank</a>
+<a href="https://auth.geeksforgeeks.org/user/enoughsudhanshu">GeeksForGeeks</a>
 <a href="https://codechef.com/users/enoughsudhanshu">CodeChef</a>
 <a href="https://peerlist.io/enoughsudhanshu">Peerlist</a>
 <a href="https://twitter.com/enoughsudhanshu">Twitter</a>
@@ -277,7 +296,7 @@ backend platforms using Python, Flask, Java, C/C++, SQL and strong DSA fundament
 
 </div>
 
-<!-- CERT MODAL -->
+<!-- ===== MODAL ===== -->
 <div id="certModal">
 <div class="modal-bg" onclick="closeCert()"></div>
 <div class="modal-box">
@@ -287,7 +306,7 @@ backend platforms using Python, Flask, Java, C/C++, SQL and strong DSA fundament
 </div>
 
 <script>
-/* hero auto image – clean */
+/* hero auto image */
 const imgs=[
  "enough-sudhanshu.jpg",
  "enough-sudhanshu-1.jpg",
@@ -304,7 +323,7 @@ setInterval(()=>{
  },400);
 },4500);
 
-/* cert modal */
+/* certificate modal */
 function openCert(file){
  document.getElementById("certFrame").src=file;
  document.getElementById("certModal").style.display="block";
