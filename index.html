@@ -7,130 +7,181 @@
 <title>Enough Sudhanshu | Full Stack Software Developer</title>
 
 <meta name="description"
-content="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer skilled in Flask, Python, Java, C/C++, SQL, ERP systems, automation tools and problem solving.">
+content="Enough Sudhanshu (Enough Coder, Sudhanshu Pandey) – Full Stack Software Developer skilled in Flask, Python, Java, C/C++, SQL, ERP systems and automation.">
 
 <meta name="robots" content="index, follow">
 
-<!-- ===== PERSON SCHEMA ===== -->
+<!-- PERSON SCHEMA -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Enough Sudhanshu",
-  "alternateName":[
-    "Enough",
-    "Enough Coder",
-    "Sudhanshu Pandey",
-    "enoughsudhanshu"
-  ],
-  "jobTitle":"Full Stack Software Developer",
-  "knowsAbout":[
-    "Python","Flask","SQLite","SQL","Java","C","C++",
-    "Data Structures","Algorithms",
-    "ERP Systems","Automation",
-    "Machine Learning","REST APIs"
-  ],
-  "image":[
-    "https://enoughsudhanshu.github.io/enough-sudhanshu.jpg",
-    "https://enoughsudhanshu.github.io/enough-sudhanshu-1.jpg",
-    "https://enoughsudhanshu.github.io/enough-sudhanshu-2.jpg"
-  ],
-  "url":"https://enoughsudhanshu.github.io",
-  "sameAs":[
-    "https://github.com/enoughsudhanshu",
-    "https://linkedin.com/in/enoughsudhanshu",
-    "https://twitter.com/enoughsudhanshu",
-    "https://instagram.com/enoughsudhanshu",
-    "https://leetcode.com/enoughsudhanshu",
-    "https://hackerrank.com/enoughsudhanshu",
-    "https://auth.geeksforgeeks.org/user/enoughsudhanshu",
-    "https://codechef.com/users/enoughsudhanshu",
-    "https://peerlist.io/enoughsudhanshu"
-  ]
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Enough Sudhanshu",
+ "alternateName":["Enough","Enough Coder","Sudhanshu Pandey","enoughsudhanshu"],
+ "jobTitle":"Full Stack Software Developer",
+ "image":[
+  "https://enoughsudhanshu.github.io/enough-sudhanshu.jpg",
+  "https://enoughsudhanshu.github.io/enough-sudhanshu-1.jpg",
+  "https://enoughsudhanshu.github.io/enough-sudhanshu-2.jpg"
+ ],
+ "url":"https://enoughsudhanshu.github.io",
+ "sameAs":[
+  "https://github.com/enoughsudhanshu",
+  "https://linkedin.com/in/enoughsudhanshu",
+  "https://twitter.com/enoughsudhanshu",
+  "https://instagram.com/enoughsudhanshu",
+  "https://leetcode.com/enoughsudhanshu",
+  "https://hackerrank.com/enoughsudhanshu",
+  "https://codechef.com/users/enoughsudhanshu",
+  "https://peerlist.io/enoughsudhanshu"
+ ]
 }
 </script>
 
 <style>
 :root{
-  --bg:#050816;
-  --card:#0f172a;
-  --neon:#00eaff;
-  --neon2:#00ff88;
-  --text:#e6f1ff;
-  --muted:#9fb3c8;
+ --bg:#050816;
+ --card:#0f172a;
+ --neon:#00eaff;
+ --neon2:#00ff88;
+ --text:#e6f1ff;
+ --muted:#9fb3c8;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:Segoe UI,system-ui;
-  background:radial-gradient(circle at top,#0a1a3a,#050816);
-  color:var(--text);
+ font-family:Segoe UI,system-ui;
+ background:radial-gradient(circle at top,#0a1a3a,#050816);
+ color:var(--text);
 }
 .container{max-width:1400px;margin:auto;padding:30px}
 
-/* HERO */
+/* ===== HERO FIXED ===== */
 header{text-align:center;padding:90px 20px}
+.hero-wrap{
+ position:relative;
+ width:200px;
+ height:200px;
+ margin:0 auto 35px;
+}
 .hero-img{
-  width:190px;height:190px;border-radius:50%;
-  border:4px solid var(--neon);
-  box-shadow:0 0 40px var(--neon);
-  transition:opacity .8s ease;
+ width:100%;
+ height:100%;
+ border-radius:50%;
+ object-fit:cover;
+ border:4px solid var(--neon);
+ background:#000;
+ image-rendering:auto;
+ box-shadow:0 0 18px rgba(0,234,255,.6);
+ transition:opacity .8s ease;
 }
-.hero-ring{
-  position:relative;display:inline-block;margin-bottom:30px;
-}
-.hero-ring::before{
-  content:"";position:absolute;inset:-18px;
-  border:2px solid var(--neon2);
-  border-radius:50%;
-  animation:spin 8s linear infinite;
+
+/* ring OUTSIDE image (no blur on face) */
+.hero-wrap::after{
+ content:"";
+ position:absolute;
+ inset:-14px;
+ border-radius:50%;
+ border:2px solid var(--neon2);
+ animation:spin 8s linear infinite;
 }
 @keyframes spin{to{transform:rotate(360deg)}}
 
 h1{
-  font-size:3.6rem;
-  background:linear-gradient(90deg,var(--neon),var(--neon2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+ font-size:3.4rem;
+ background:linear-gradient(90deg,var(--neon),var(--neon2));
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
 }
-.tagline{color:var(--muted);font-size:1.4rem;margin:15px 0}
-.bio{max-width:800px;margin:auto;color:var(--muted);line-height:1.9}
-.alias{font-size:14px;opacity:.7}
+.tagline{color:var(--muted);font-size:1.4rem;margin:14px 0}
+.bio{max-width:820px;margin:auto;color:var(--muted);line-height:1.9}
+.alias{font-size:14px;opacity:.75}
 
 .resume-btn{
-  display:inline-block;margin-top:30px;
-  padding:15px 40px;border-radius:40px;
-  background:linear-gradient(135deg,var(--neon),var(--neon2));
-  color:#001018;font-weight:800;text-decoration:none;
-  box-shadow:0 0 35px rgba(0,234,255,.8);
+ display:inline-block;margin-top:28px;
+ padding:14px 36px;border-radius:40px;
+ background:linear-gradient(135deg,var(--neon),var(--neon2));
+ color:#001018;font-weight:800;text-decoration:none;
+ box-shadow:0 0 30px rgba(0,234,255,.7);
 }
 
-/* SECTIONS */
+/* ===== SECTIONS ===== */
 section{margin:110px 0}
-h2{text-align:center;font-size:2.7rem;margin-bottom:60px}
+h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:35px;
 }
 .card{
-  background:linear-gradient(160deg,#0f172a,#020617);
-  border:1px solid rgba(0,234,255,.25);
-  border-radius:22px;
-  padding:30px;
-  transition:.4s;
+ background:linear-gradient(160deg,#0f172a,#020617);
+ border:1px solid rgba(0,234,255,.25);
+ border-radius:22px;
+ padding:30px;
+ transition:.4s;
 }
 .card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 0 45px rgba(0,234,255,.4);
+ transform:translateY(-10px);
+ box-shadow:0 0 40px rgba(0,234,255,.4);
 }
 .card h3{margin-bottom:10px}
 .card p{color:var(--muted)}
 
-.platforms a{
-  display:inline-block;margin:6px 10px;
-  color:var(--neon);text-decoration:none;font-weight:600;
+/* ===== CERTIFICATE GALLERY ===== */
+.cert-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:35px;
+}
+.cert{
+ background:linear-gradient(160deg,#0f172a,#020617);
+ border:1px solid rgba(0,234,255,.3);
+ border-radius:18px;
+ padding:16px;
+ cursor:pointer;
+ transition:.4s;
+}
+.cert:hover{
+ transform:translateY(-12px) scale(1.04);
+ box-shadow:0 0 55px rgba(0,234,255,.45);
+}
+.cert img{
+ width:100%;
+ height:170px;
+ object-fit:cover;
+ border-radius:12px;
+}
+.cert h4{
+ margin-top:12px;
+ color:var(--neon);
+ font-size:1.05rem;
+ text-align:center;
 }
 
+/* ===== MODAL ===== */
+#certModal{display:none;position:fixed;inset:0;z-index:999}
+.modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.85)}
+.modal-box{
+ position:relative;
+ width:88%;height:88%;
+ margin:4% auto;
+ background:#020617;
+ border-radius:20px;
+ overflow:hidden;
+ box-shadow:0 0 80px rgba(0,234,255,.6);
+}
+.modal-box iframe{width:100%;height:100%;border:none}
+.close-btn{
+ position:absolute;top:15px;right:15px;
+ padding:10px 18px;border-radius:30px;
+ background:linear-gradient(135deg,var(--neon),var(--neon2));
+ color:#001018;font-weight:800;
+ text-decoration:none;cursor:pointer;
+}
+
+.platforms a{
+ display:inline-block;margin:6px 10px;
+ color:var(--neon);text-decoration:none;font-weight:600;
+}
 footer{text-align:center;padding:70px 20px;color:var(--muted)}
 footer a{color:var(--neon)}
 </style>
@@ -140,54 +191,71 @@ footer a{color:var(--neon)}
 <div class="container">
 
 <header>
-<div class="hero-ring">
-  <img id="heroImage" src="enough-sudhanshu.jpg" class="hero-img"
-       alt="Enough Sudhanshu Full Stack Software Developer">
+<div class="hero-wrap">
+ <img id="heroImage"
+      src="enough-sudhanshu.jpg"
+      class="hero-img"
+      alt="Enough Sudhanshu Full Stack Software Developer">
 </div>
 
 <h1>Enough Sudhanshu</h1>
 <p class="tagline">Full Stack Developer • Automation • Problem Solver</p>
 
 <p class="bio">
-B.Tech CSE student building real-world ERP systems, automation tools,
-and backend platforms using Python, Flask, Java, C/C++, SQL and
-strong data-structure fundamentals.
+B.Tech CSE student building real-world ERP systems, automation tools and
+backend platforms using Python, Flask, Java, C/C++, SQL and strong DSA fundamentals.
 </p>
 
-<p class="alias">
-Also known as Enough • Enough Coder • Sudhanshu Pandey
-</p>
+<p class="alias">Also known as Enough • Enough Coder • Sudhanshu Pandey</p>
 
 <a href="Enough-Sudhanshu-Resume.pdf" download class="resume-btn">
 ⚡ Download Resume
 </a>
 </header>
 
-<!-- SKILLS -->
 <section>
 <h2>Technical Skills</h2>
 <div class="grid">
 <div class="card"><h3>Languages</h3><p>Python, Java, C, C++</p></div>
-<div class="card"><h3>Backend</h3><p>Flask, REST APIs, MVC</p></div>
+<div class="card"><h3>Backend</h3><p>Flask, REST APIs</p></div>
 <div class="card"><h3>Databases</h3><p>SQLite, SQL</p></div>
 <div class="card"><h3>Core CS</h3><p>DSA, OOPs, OS, DBMS</p></div>
-<div class="card"><h3>Automation</h3><p>Scripting, ERP Systems</p></div>
-<div class="card"><h3>AI / ML</h3><p>Basics, logic-driven systems</p></div>
+<div class="card"><h3>Automation</h3><p>ERP Systems, Scripting</p></div>
+<div class="card"><h3>AI / ML</h3><p>Fundamentals</p></div>
 </div>
 </section>
 
-<!-- PROJECTS -->
 <section>
-<h2>Projects</h2>
-<div class="grid">
-<div class="card"><h3>School ERP System</h3><p>Complete ERP for school operations.</p></div>
-<div class="card"><h3>Billing Management System</h3><p>Invoices, customers, PDF billing.</p></div>
-<div class="card"><h3>AI-Free Resume Shortlisting</h3><p>Transparent rule-based filtering.</p></div>
-<div class="card"><h3>Automation Tool Suite</h3><p>Python automation utilities.</p></div>
+<h2>Certifications & Achievements</h2>
+<div class="cert-grid">
+
+<div class="cert" onclick="openCert('innovilla-internship.pdf')">
+<img src="cert-thumbs/innovilla.jpg"><h4>Innovilla Internship</h4>
+</div>
+
+<div class="cert" onclick="openCert('JavaScript-Algorithms-and-Data-Structures-Beta.pdf')">
+<img src="cert-thumbs/js-dsa.jpg"><h4>JavaScript DSA</h4>
+</div>
+
+<div class="cert" onclick="openCert('From-Analysing-Data-To-Creating-ML-Models.pdf')">
+<img src="cert-thumbs/ml.jpg"><h4>ML Fundamentals</h4>
+</div>
+
+<div class="cert" onclick="openCert('Master-Frontend-to-Backend.pdf')">
+<img src="cert-thumbs/fullstack.jpg"><h4>Full Stack</h4>
+</div>
+
+<div class="cert" onclick="openCert('DOC-20241031-WA0005.pdf')">
+<img src="cert-thumbs/namastejs.jpg"><h4>Namaste JavaScript</h4>
+</div>
+
+<div class="cert" onclick="openCert('Product-Management.pdf')">
+<img src="cert-thumbs/product.jpg"><h4>Product Management</h4>
+</div>
+
 </div>
 </section>
 
-<!-- PLATFORMS -->
 <section>
 <h2>Developer Profiles</h2>
 <div class="platforms" style="text-align:center">
@@ -195,7 +263,6 @@ Also known as Enough • Enough Coder • Sudhanshu Pandey
 <a href="https://linkedin.com/in/enoughsudhanshu">LinkedIn</a>
 <a href="https://leetcode.com/enoughsudhanshu">LeetCode</a>
 <a href="https://hackerrank.com/enoughsudhanshu">HackerRank</a>
-<a href="https://auth.geeksforgeeks.org/user/enoughsudhanshu">GeeksForGeeks</a>
 <a href="https://codechef.com/users/enoughsudhanshu">CodeChef</a>
 <a href="https://peerlist.io/enoughsudhanshu">Peerlist</a>
 <a href="https://twitter.com/enoughsudhanshu">Twitter</a>
@@ -210,7 +277,17 @@ Also known as Enough • Enough Coder • Sudhanshu Pandey
 
 </div>
 
+<!-- CERT MODAL -->
+<div id="certModal">
+<div class="modal-bg" onclick="closeCert()"></div>
+<div class="modal-box">
+ <iframe id="certFrame"></iframe>
+ <div class="close-btn" onclick="closeCert()">✕ Close</div>
+</div>
+</div>
+
 <script>
+/* hero auto image – clean */
 const imgs=[
  "enough-sudhanshu.jpg",
  "enough-sudhanshu-1.jpg",
@@ -219,13 +296,23 @@ const imgs=[
 let i=0;
 const hero=document.getElementById("heroImage");
 setInterval(()=>{
-  hero.style.opacity=0;
-  setTimeout(()=>{
-    i=(i+1)%imgs.length;
-    hero.src=imgs[i];
-    hero.style.opacity=1;
-  },400);
-},4000);
+ hero.style.opacity=0;
+ setTimeout(()=>{
+  i=(i+1)%imgs.length;
+  hero.src=imgs[i];
+  hero.style.opacity=1;
+ },400);
+},4500);
+
+/* cert modal */
+function openCert(file){
+ document.getElementById("certFrame").src=file;
+ document.getElementById("certModal").style.display="block";
+}
+function closeCert(){
+ document.getElementById("certModal").style.display="none";
+ document.getElementById("certFrame").src="";
+}
 </script>
 
 </body>
