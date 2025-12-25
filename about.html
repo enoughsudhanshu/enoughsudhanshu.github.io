@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sudhanshu</title>
+    <style>
+        :root {
+            --color-primary: #218085;
+            --color-primary-hover: #1c7578;
+            --color-bg: #fcfcf9;
+            --color-surface: #ffffff;
+            --color-text: #134252;
+            --color-text-secondary: #626c71;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-success: #208085;
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --radius-base: 8px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--space-16) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--space-20);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-24);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-32) var(--space-20);
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--space-32);
+        }
+
+        .page-header h1 {
+            font-size: 40px;
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Content */
+        .about-section {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            padding: var(--space-32);
+            margin-bottom: var(--space-32);
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            margin-bottom: var(--space-20);
+            color: var(--color-text);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: var(--space-16);
+        }
+
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .about-section ul {
+            margin-left: var(--space-20);
+            margin-bottom: var(--space-20);
+        }
+
+        .about-section li {
+            margin-bottom: var(--space-16);
+            font-size: 16px;
+            color: var(--color-text);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-24);
+            margin-top: var(--space-24);
+        }
+
+        .skill-category {
+            background: rgba(33, 128, 141, 0.05);
+            border-left: 4px solid var(--color-primary);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--space-12);
+            color: var(--color-primary);
+        }
+
+        .skill-category ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skill-category li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: var(--color-text);
+        }
+
+        .skill-category li:before {
+            content: "✓ ";
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Philosophy */
+        .philosophy-box {
+            background: linear-gradient(135deg, rgba(33, 128, 141, 0.1), rgba(33, 128, 141, 0.05));
+            border: 2px solid var(--color-primary);
+            padding: var(--space-24);
+            border-radius: var(--radius-base);
+            text-align: center;
+            margin: var(--space-32) 0;
+        }
+
+        .philosophy-box p {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-24) var(--space-20);
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-20);
+            margin-bottom: var(--space-16);
+        }
+
+        .social-links a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--color-primary-hover);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: var(--space-16);
+                font-size: 14px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .about-section {
+                padding: var(--space-20);
+            }
+
+            .container {
+                padding: var(--space-20);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-header">
+            <h1>About Me</h1>
+            <p>Full Stack Developer | Automation Engineer | Problem Solver</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h2>👨‍💻 Who I Am</h2>
+            <p>
+                I'm <strong>Sudhanshu Pandey</strong>, known online as <strong>Enough Sudhanshu</strong>. 
+                I'm a <strong>Full Stack Software Developer and Automation Engineer</strong> passionate about building 
+                <strong>practical, scalable, and production-ready software systems</strong>.
+            </p>
+            <p>
+                I don't just write code — I <strong>design systems</strong>, <strong>automate workflows</strong>, 
+                and <strong>convert ideas into usable products</strong>.
+            </p>
+            <p>
+                My philosophy is simple: <strong>"I am not special. I am consistent."</strong>
+            </p>
+        </div>
+
+        <!-- Core Interests -->
+        <div class="about-section">
+            <h2>🎯 Core Interests</h2>
+            <ul>
+                <li><strong>Real-world problem solving</strong> - Building solutions that actually get used</li>
+                <li><strong>Backend-heavy applications</strong> - Strong fundamentals and scalable architecture</li>
+                <li><strong>Automation & data-driven systems</strong> - Automating repetitive workflows efficiently</li>
+                <li><strong>Clean architecture</strong> - Writing maintainable, readable, and tested code</li>
+            </ul>
+            <p style="margin-top: var(--space-20);">
+                I believe in <strong>learning by building</strong>. Most of my skills come from hands-on projects 
+                rather than theory alone.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="about-section">
+            <h2>🛠️ Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Web & Backend</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>REST APIs</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>Jinja Templates</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🗄️ Databases</h3>
+                    <ul>
+                        <li>SQLite</li>
+                        <li>MySQL</li>
+                        <li>Database Design</li>
+                        <li>ORM Concepts</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🤖 AI & Automation</h3>
+                    <ul>
+                        <li>Scikit-learn</li>
+                        <li>Data Preprocessing</li>
+                        <li>Automation Scripts</li>
+                        <li>PDF Automation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ Tools & Platforms</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Linux (Basics)</li>
+                        <li>VS Code</li>
+                        <li>Render Deploy</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📊 Other Skills</h3>
+                    <ul>
+                        <li>System Design</li>
+                        <li>Problem Solving</li>
+                        <li>Documentation</li>
+                        <li>Code Review</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- What I Build -->
+        <div class="about-section">
+            <h2>🚀 What I Build</h2>
+            <ul>
+                <li><strong>School/College ERP Systems</strong> - Complete management solutions with role-based access</li>
+                <li><strong>AI-Based Resume Shortlisting Systems</strong> - Intelligent candidate filtering</li>
+                <li><strong>Fee Management & Attendance Systems</strong> - Automated tracking and reporting</li>
+                <li><strong>PDF & Report Automation</strong> - Batch processing and document generation</li>
+                <li><strong>Backend-Heavy Web Applications</strong> - Scalable and efficient systems</li>
+                <li><strong>Custom Automation Tools</strong> - Solving unique business problems</li>
+            </ul>
+            <p style="margin-top: var(--space-20); font-weight: 500; color: var(--color-primary);">
+                All projects focus on <strong>real usability</strong>, not just demos.
+            </p>
+        </div>
+
+        <!-- Philosophy Box -->
+        <div class="philosophy-box">
+            <p>💡 "I am not special. I am enough edition."</p>
+            <p style="font-size: 14px; margin-top: var(--space-16); font-weight: 400; font-style: normal; color: var(--color-text);">
+                I focus on strong fundamentals, real deployment logic, and writing code that actually gets used.
+            </p>
+        </div>
+
+        <!-- Education & Experience -->
+        <div class="about-section">
+            <h2>🎓 Education</h2>
+            <ul>
+                <li><strong>BTech in Computer Science & Engineering</strong> - AKTU University, India (3rd Year)</li>
+                <li><strong>Specialization</strong> - Full Stack Development & AI/ML</li>
+                <li><strong>Coursework</strong> - DBMS, Operating Systems, DSA, Web Development, AI/ML</li>
+            </ul>
+        </div>
+
+        <!-- Brand -->
+        <div class="about-section">
+            <h2>🌟 Brand</h2>
+            <p>
+                I'm building the brand <strong>"enoughsudhanshu / enoughlab"</strong> around consistent delivery, 
+                quality software, and real-world solutions.
+            </p>
+            <p>
+                I'm open to <strong>internships</strong>, <strong>freelance projects</strong>, and 
+                <strong>serious software development work</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/enoughsudhanshu" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/sudhanshupandey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://peerlist.io/enoughsudhanshu" target="_blank" rel="noopener noreferrer">Peerlist</a>
+        </div>
+        <p>&copy; 2025 Sudhanshu Pandey. All rights reserved.</p>
+    </footer>
+</body>
+</html>
