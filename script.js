@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(() => {
       loadingScreen.classList.add('hidden');
-    }, 3600);
+    }, 360);
   }
 });
 
