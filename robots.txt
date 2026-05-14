@@ -1,4 +1,79 @@
+# robots.txt for EnoughSudhanshu Website
+
 User-agent: *
 Allow: /
 
+# Main Sitemap
 Sitemap: https://enoughsudhanshu.github.io/sitemap.xml
+
+# Allow Major Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI Crawlers / LLM Bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Performance / Crawl Optimization
+Crawl-delay: 1
+
+# Security Suggestions
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /.git/
+
+# Explicitly Allow Important Pages
+Allow: /about.html
+Allow: /projects.html
+Allow: /blog.html
+Allow: /founder.html
+Allow: /contact.html
+Allow: /about-founder.html
+Allow: /author/enoughsudhanshu.html
+
+# Allow Blog Articles
+Allow: /blogs/
+
+# End of robots.txt
