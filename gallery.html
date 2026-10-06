@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Posts & Gallery | Sudhanshu Pandey (enoughsudhanshu)</title>
+<meta name="description" content="LinkedIn posts, GitHub projects, certificates and achievements of Sudhanshu Pandey, founder of Bhishmaa Group." />
+<link rel="icon" href="/favicon.png" type="image/png" sizes="48x48">
+<link rel="canonical" href="https://enoughsudhanshu.github.io/gallery.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fff;--bg-soft:#f6f5f1;--ink:#0f0f0e;--ink-soft:#63625c;--line:#e7e5df;--accent:#ff5a1f;--accent-dark:#c2410c;--accent-tint:#fff1ea;--radius:22px;--maxw:1220px;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{margin:0;font-family:'Fraunces',serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--accent-dark);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:21px;}
+  .brand span{font-style:normal;font-weight:800;color:var(--accent);}
+  nav.links{display:flex;gap:30px;font-size:14.5px;font-weight:500;color:var(--ink-soft);}
+  nav.links a:hover,nav.links a.on{color:var(--ink);}
+  nav.links a.on{border-bottom:2px solid var(--accent);padding-bottom:2px;}
+  .nav-cta{background:var(--ink);color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:background .25s,transform .25s;}
+  .nav-cta:hover{background:var(--accent);transform:translateY(-2px);}
+
+  .page-head{padding:64px 0 28px;}
+  .page-head h1{font-size:clamp(36px,6vw,64px);font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-top:12px;}
+  .page-head h1 em{color:var(--accent);}
+  .page-head p{max-width:560px;color:var(--ink-soft);font-size:16px;line-height:1.65;margin-top:16px;}
+
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:30px 0 0;padding-bottom:22px;border-bottom:1px solid var(--line);}
+  .tab{font:600 14px 'Inter',sans-serif;padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .2s;}
+  .tab:hover{border-color:var(--ink);color:var(--ink);}
+  .tab.active{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .tab small{opacity:.65;margin-left:6px;font-weight:500;}
+
+  .panel{display:none;padding:40px 0 90px;}
+  .panel.active{display:block;}
+  .subfilters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;}
+  .chip{font:500 13px 'Inter',sans-serif;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg-soft);color:var(--ink-soft);cursor:pointer;}
+  .chip.active{background:var(--accent-tint);border-color:var(--accent);color:var(--accent-dark);}
+
+  .empty{border:1px dashed var(--line);border-radius:var(--radius);padding:44px 28px;text-align:center;color:var(--ink-soft);font-size:14.5px;line-height:1.7;background:var(--bg-soft);}
+  .empty code{background:#fff;border:1px solid var(--line);padding:2px 7px;border-radius:6px;font-size:13px;}
+
+  /* LinkedIn posts */
+  .post-grid{columns:3 340px;column-gap:24px;}
+  .post{break-inside:avoid;margin-bottom:24px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;}
+  .post iframe{width:100%;height:560px;border:0;display:block;}
+  .post-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);gap:10px;}
+  .post-foot a{font-weight:600;color:var(--accent-dark);}
+  .post-link{padding:26px;}
+  .post-link h3{font-family:'Inter',sans-serif;font-size:17px;font-weight:700;}
+  .post-link p{font-size:13.5px;color:var(--ink-soft);margin:8px 0 0;}
+
+  /* GitHub repos */
+  .repo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .repo{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:border-color .25s,transform .25s;}
+  .repo:hover{border-color:var(--accent);transform:translateY(-4px);}
+  .repo-img{aspect-ratio:2/1;background:var(--bg-soft);overflow:hidden;border-bottom:1px solid var(--line);}
+  .repo-img img{width:100%;height:100%;object-fit:cover;}
+  .repo-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+  .repo-body h3{font-family:'Inter',sans-serif;font-size:17px;font-weight:700;word-break:break-word;}
+  .repo-body p{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:8px 0 16px;flex:1;}
+  .repo-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;font-weight:600;color:var(--ink-soft);}
+  .repo-meta span{background:var(--bg-soft);border:1px solid var(--line);padding:4px 10px;border-radius:999px;}
+  .repo-meta .lang{color:var(--accent-dark);background:var(--accent-tint);border-color:#ffd9c8;}
+
+  /* Gallery */
+  .g-grid{columns:3 260px;column-gap:18px;}
+  .g-item{break-inside:avoid;margin-bottom:18px;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;border:1px solid var(--line);background:#fff;padding:0;display:block;width:100%;text-align:left;}
+  .g-item img{width:100%;transition:transform .4s;}
+  .g-item:hover img{transform:scale(1.04);}
+  .g-item .meta{position:absolute;inset:auto 0 0 0;padding:34px 16px 14px;color:#fff;font-size:14px;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.78));opacity:0;transition:opacity .3s;}
+  .g-item:hover .meta,.g-item:focus-visible .meta{opacity:1;}
+  .g-item .meta small{display:block;font-weight:500;opacity:.8;margin-top:3px;}
+  .lb{position:fixed;inset:0;background:rgba(10,10,9,.92);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:100;padding:24px;}
+  .lb.open{display:flex;}
+  .lb img{max-width:92vw;max-height:78vh;border-radius:10px;}
+  .lb-cap{color:#fff;margin-top:16px;text-align:center;font-size:15px;}
+  .lb-cap a{color:#ff9a6b;margin-left:12px;font-weight:600;}
+  .lb-close{position:absolute;top:14px;right:22px;font-size:38px;color:#fff;background:none;border:0;cursor:pointer;}
+
+  .status{font-size:13px;color:var(--ink-soft);margin-bottom:20px;}
+
+  footer{padding:50px 0 34px;border-top:1px solid var(--line);}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:26px;}
+  .footer-brand{font-family:'Fraunces',serif;font-style:italic;font-size:22px;}
+  .footer-links{display:flex;gap:26px;font-size:13.5px;color:var(--ink-soft);}
+  .footer-links a:hover{color:var(--ink);}
+  .footer-bottom{color:var(--ink-soft);font-size:12.5px;}
+
+  @media (max-width:1000px){.repo-grid{grid-template-columns:1fr 1fr;}nav.links{display:none;}}
+  @media (max-width:640px){.wrap{padding:0 20px;}.nav-inner{padding:16px 20px;}.repo-grid{grid-template-columns:1fr;}.page-head{padding:40px 0 16px;}.post iframe{height:520px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">enough<span>sudhanshu</span></a>
+    <nav class="links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="gallery.html" class="on">Posts</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Let's talk</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-head">
+    <span class="eyebrow">Proof of work</span>
+    <h1>Posts, projects &amp; <em>wins</em></h1>
+    <p>What I share on LinkedIn, what I ship on GitHub, and the certificates and moments behind it.</p>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="posts" role="tab">LinkedIn posts<small id="cPosts"></small></button>
+    <button class="tab" data-tab="github" role="tab">GitHub repos<small id="cRepos"></small></button>
+    <button class="tab" data-tab="gallery" role="tab">Gallery<small id="cGal"></small></button>
+  </div>
+
+  <section class="panel active" id="panel-posts">
+    <div class="post-grid" id="postGrid"></div>
+  </section>
+
+  <section class="panel" id="panel-github">
+    <div class="status" id="ghStatus">Loading repositories from GitHub…</div>
+    <div class="repo-grid" id="repoGrid"></div>
+  </section>
+
+  <section class="panel" id="panel-gallery">
+    <div class="subfilters" id="gFilters"></div>
+    <div class="g-grid" id="gGrid"></div>
+  </section>
+</main>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <img id="lbImg" alt="">
+  <div class="lb-cap"><span id="lbTitle"></span><a id="lbLink" target="_blank" rel="noopener">View original</a></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">enoughsudhanshu</div>
+      <div class="footer-links">
+        <a href="https://github.com/enoughsudhanshu">GitHub</a>
+        <a href="https://linkedin.com/in/enoughsudhanshu">LinkedIn</a>
+        <a href="mailto:sudhanshupandey10124@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sudhanshu Pandey — Founder, Bhishmaa Group.</div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================
+   SIRF YAHI SECTION EDIT KARNA HAI
+   ===================================================== */
+const CONFIG = {
+  githubUser: 'enoughsudhanshu',
+  showForks: false,                 // true karo to forked repos bhi dikhenge
+  hideRepos: ['enoughsudhanshu.github.io'],   // jo repos nahi dikhane unke naam
+  maxRepos: 30
+};
+
+/* 1) LinkedIn posts: post ka link paste karo (naya sabse upar).
+      LinkedIn post -> ••• -> "Copy link to post" */
+const LINKEDIN_POSTS = [
+  { title: "FlyRank AI",                   url: "https://www.linkedin.com/posts/enoughsudhanshu_flyrankai-share-7513227487607382016-R4JV" },
+  { title: "AAI Internship",               url: "https://www.linkedin.com/posts/enoughsudhanshu_airportsauthorityofindia-aai-internship-share-7483730940234584064-QOkf" },
+  { title: "Python · freeCodeCamp",        url: "https://www.linkedin.com/posts/enoughsudhanshu_python-freecodecamp-developer-share-7477671101444222978-mErj" },
+  { title: "Git & GitHub",                 url: "https://www.linkedin.com/posts/enoughsudhanshu_git-github-softwaredeveloper-share-7472886240497778690-w8sw" },
+  { title: "Build in Public",              url: "https://www.linkedin.com/posts/enoughsudhanshu_buildinpublic-developers-webdevelopment-ugcPost-7436433174487920642-RsfB" },
+  { title: "Python · HackerRank",          url: "https://www.linkedin.com/posts/enoughsudhanshu_python-problemsolving-hackerrank-share-7373694344509321216-eJWx" },
+  { title: "DevOps & AWS",                 url: "https://www.linkedin.com/posts/enoughsudhanshu_devops-aws-continuouslearning-share-7336245351378493440-84xc" },
+  { title: "Web Development Certification", url: "https://www.linkedin.com/posts/enoughsudhanshu_webdevelopment-certification-career-share-7251068117383041024-Lky2" },
+];
+
+/* 2) Gallery: certificates, achievements, photos.
+      Image ko gallery/ folder me rakho. cat: certificate | achievement | photo | linkedin | github */
+const GALLERY = [
+  // { img: "gallery/aws-genai.jpg", title: "AWS Educate: Intro to Generative AI", cat: "certificate", date: "2025", link: "" },
+  // { img: "gallery/aai-excellent.jpg", title: "AAI Internship: rated Excellent", cat: "achievement", date: "2026", link: "" },
+];
+/* ===================================================== */
+
+const $ = (s) => document.querySelector(s);
+const esc = (t) => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---------- Tabs ---------- */
+function openTab(name){
+  if(!['posts','github','gallery'].includes(name)) name = 'posts';
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+  history.replaceState(null, '', '#' + name);
+}
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => openTab(t.dataset.tab)));
+openTab(location.hash.slice(1));
+
+/* ---------- LinkedIn ---------- */
+function embedSrc(url){
+  let m = url.match(/urn:li:(share|ugcPost|activity):(\d+)/) || url.match(/(share|ugcPost|activity)[-:](\d{15,})/);
+  return m ? `https://www.linkedin.com/embed/feed/update/urn:li:${m[1]}:${m[2]}` : null;
+}
+function renderPosts(){
+  const grid = $('#postGrid');
+  $('#cPosts').textContent = LINKEDIN_POSTS.length || '';
+  if(!LINKEDIN_POSTS.length){
+    grid.style.columns = '1';
+    grid.innerHTML = `<div class="empty">Abhi koi post add nahi hui.<br>Page ke script me <code>LINKEDIN_POSTS</code> list me apne LinkedIn post ka link paste karo, post yahan apne aap embed ho jayegi.</div>`;
+    return;
+  }
+  grid.innerHTML = LINKEDIN_POSTS.map(p => {
+    const url = typeof p === 'string' ? p : p.url;
+    const title = typeof p === 'string' ? '' : p.title;
+    const src = embedSrc(url);
+    if(src){
+      return `<article class="post">
+        <iframe src="${esc(src)}" loading="lazy" allowfullscreen title="${esc(title || 'LinkedIn post')}"></iframe>
+        <div class="post-foot"><span>${esc(title || 'LinkedIn')}</span><a href="${esc(url)}" target="_blank" rel="noopener">Open post</a></div>
+      </article>`;
+    }
+    return `<article class="post post-link"><h3>${esc(title || 'LinkedIn post')}</h3>
+      <p>Is link se embed nahi ban saka, par post yahan se khul jayegi.</p>
+      <div class="post-foot" style="padding:14px 0 0;border:0"><a href="${esc(url)}" target="_blank" rel="noopener">Open on LinkedIn</a></div></article>`;
+  }).join('');
+}
+
+/* ---------- GitHub (auto fetch) ---------- */
+async function loadRepos(){
+  const grid = $('#repoGrid'), status = $('#ghStatus');
+  const key = 'gh_repos_' + CONFIG.githubUser;
+  let repos = null;
+  try{
+    const cached = JSON.parse(sessionStorage.getItem(key) || 'null');
+    if(cached && Date.now() - cached.t < 15 * 60 * 1000) repos = cached.d;
+  }catch(e){}
+  if(!repos){
+    try{
+      const r = await fetch(`https://api.github.com/users/${CONFIG.githubUser}/repos?per_page=100&sort=pushed`);
+      if(!r.ok) throw new Error(r.status);
+      repos = await r.json();
+      try{ sessionStorage.setItem(key, JSON.stringify({t: Date.now(), d: repos})); }catch(e){}
+    }catch(e){
+      status.innerHTML = `Repos load nahi ho paye (GitHub ki limit ya network). <a href="https://github.com/${esc(CONFIG.githubUser)}?tab=repositories" target="_blank" rel="noopener" style="color:var(--accent-dark);font-weight:600">GitHub par dekho</a>`;
+      return;
+    }
+  }
+  repos = repos
+    .filter(r => (CONFIG.showForks || !r.fork) && !r.archived && !CONFIG.hideRepos.includes(r.name))
+    .sort((a, b) => (b.stargazers_count - a.stargazers_count) || (new Date(b.pushed_at) - new Date(a.pushed_at)))
+    .slice(0, CONFIG.maxRepos);
+  $('#cRepos').textContent = repos.length || '';
+  status.textContent = repos.length ? `${repos.length} public repositories, GitHub se live.` : 'Koi public repo nahi mili.';
+  grid.innerHTML = repos.map(r => `
+    <a class="repo" href="${esc(r.html_url)}" target="_blank" rel="noopener">
+      <div class="repo-img"><img loading="lazy" src="https://opengraph.githubassets.com/1/${esc(r.full_name)}" alt="${esc(r.name)} preview"></div>
+      <div class="repo-body">
+        <h3>${esc(r.name)}</h3>
+        <p>${esc(r.description || 'No description yet.')}</p>
+        <div class="repo-meta">
+          ${r.language ? `<span class="lang">${esc(r.language)}</span>` : ''}
+          <span>★ ${r.stargazers_count}</span>
+          <span>Forks ${r.forks_count}</span>
+          <span>Updated ${new Date(r.pushed_at).toLocaleDateString('en-IN',{month:'short',year:'numeric'})}</span>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+/* ---------- Gallery + lightbox ---------- */
+function renderGallery(cat = 'all'){
+  const grid = $('#gGrid'), filters = $('#gFilters');
+  $('#cGal').textContent = GALLERY.length || '';
+  if(!GALLERY.length){
+    filters.innerHTML = '';
+    grid.style.columns = '1';
+    grid.innerHTML = `<div class="empty">Gallery khali hai.<br>Images <code>gallery/</code> folder me daalo aur script ki <code>GALLERY</code> list me ek line add karo.</div>`;
+    return;
+  }
+  const cats = ['all', ...new Set(GALLERY.map(g => g.cat))];
+  filters.innerHTML = cats.map(c => `<button class="chip ${c === cat ? 'active' : ''}" data-c="${esc(c)}">${c === 'all' ? 'All' : esc(c.charAt(0).toUpperCase() + c.slice(1))}</button>`).join('');
+  filters.querySelectorAll('.chip').forEach(b => b.onclick = () => renderGallery(b.dataset.c));
+  const list = GALLERY.filter(g => cat === 'all' || g.cat === cat);
+  grid.innerHTML = list.map((g, i) => `
+    <button class="g-item" data-i="${i}">
+      <img loading="lazy" src="${esc(g.img)}" alt="${esc(g.title)}">
+      <div class="meta">${esc(g.title)}<small>${esc(g.cat)}${g.date ? ' · ' + esc(g.date) : ''}</small></div>
+    </button>`).join('');
+  grid.querySelectorAll('.g-item').forEach(el => el.onclick = () => openLb(list[+el.dataset.i]));
+}
+function openLb(g){
+  $('#lbImg').src = g.img; $('#lbImg').alt = g.title;
+  $('#lbTitle').textContent = g.title;
+  const a = $('#lbLink'); a.href = g.link || '#'; a.style.display = g.link ? 'inline' : 'none';
+  $('#lb').classList.add('open');
+}
+const closeLb = () => $('#lb').classList.remove('open');
+$('#lbClose').onclick = closeLb;
+$('#lb').addEventListener('click', e => { if(e.target.id === 'lb') closeLb(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLb(); });
+
+renderPosts();
+renderGallery();
+loadRepos();
+</script>
+</body>
+</html>
