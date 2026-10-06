@@ -146,6 +146,28 @@
     <span class="eyebrow">Proof of work</span>
     <h1>Posts, projects &amp; <em>wins</em></h1>
     <p>What I share on LinkedIn, what I ship on GitHub, and the certificates and moments behind it.</p>
+  
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-tab="posts" role="tab">LinkedIn posts<small id="cPosts"></small></button>
+    <button class="tab" data-tab="github" role="tab">GitHub repos<small id="cRepos"></small></button>
+    <button class="tab" data-tab="gallery" role="tab">Gallery<small id="cGal"></small></button>
+  </div>
+
+  <section class="panel active" id="panel-posts">
+    <div class="post-grid" id="postGrid"></div>
+  </section>
+
+  <section class="panel" id="panel-github">
+    <div class="status" id="ghStatus">Loading repositories from GitHub…</div>
+    <div class="repo-grid" id="repoGrid"></div>
+  </section>
+
+  <section class="panel" id="panel-gallery">
+    <div class="subfilters" id="gFilters"></div>
+    <div class="g-grid" id="gGrid"></div>
+  </section>
    <ul class="seo-list" style="margin:18px 0 0;padding-left:18px;color:var(--ink-soft);font-size:14.5px;line-height:1.8;max-width:640px">
 
   <li>
@@ -212,27 +234,6 @@
   </li>
 
 </ul>
-  </section>
-
-  <div class="tabs" role="tablist">
-    <button class="tab active" data-tab="posts" role="tab">LinkedIn posts<small id="cPosts"></small></button>
-    <button class="tab" data-tab="github" role="tab">GitHub repos<small id="cRepos"></small></button>
-    <button class="tab" data-tab="gallery" role="tab">Gallery<small id="cGal"></small></button>
-  </div>
-
-  <section class="panel active" id="panel-posts">
-    <div class="post-grid" id="postGrid"></div>
-  </section>
-
-  <section class="panel" id="panel-github">
-    <div class="status" id="ghStatus">Loading repositories from GitHub…</div>
-    <div class="repo-grid" id="repoGrid"></div>
-  </section>
-
-  <section class="panel" id="panel-gallery">
-    <div class="subfilters" id="gFilters"></div>
-    <div class="g-grid" id="gGrid"></div>
-  </section>
 </main>
 
 <div class="lb" id="lb" aria-modal="true" role="dialog">
