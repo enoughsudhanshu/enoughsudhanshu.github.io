@@ -312,7 +312,7 @@ function renderGallery(cat = 'all'){
   if(!GALLERY.length){
     filters.innerHTML = '';
     grid.style.columns = '1';
-    grid.innerHTML = `<div class="empty">Gallery khali hai.<br>Images <code>gallery/</code> folder me daalo aur script ki <code>GALLERY</code> list me ek line add karo.</div>`;
+    grid.innerHTML = `<div class="empty">Gallery.<br>Images</div>`;
     return;
   }
   const cats = ['all', ...new Set(GALLERY.map(g => g.cat))];
