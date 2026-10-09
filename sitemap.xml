@@ -1,56 +1,105 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-<url>
-<loc>https://enoughsudhanshu.github.io/</loc>
-</url>
+  <!-- Main pages -->
+  <url>
+    <loc>https://enoughsudhanshu.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/about.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/projects.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/founder.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/about-founder.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/author/enoughsudhanshu.html</loc>
+  </url>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/about.html</loc>
-</url>
+  <!-- Blog articles -->
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blogs/how-i-built-bhishmaa-erp.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blogs/flask-cloudflare-deployment.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blogs/postgresql-backup-automation.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blogs/scalable-backend-architecture.html</loc>
+  </url>
+  <url>
+    <loc>https://enoughsudhanshu.github.io/blogs/ai-resume-screening-system.html</loc>
+  </url>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/projects.html</loc>
-</url>
+  <!-- Certificates and achievements gallery -->
+  <url>
+    <loc>https://enoughsudhanshu.github.io/gallery.html</loc>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blog.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_AAI_internship.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - Airports Authority of India Internship Certificate</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/founder.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_flyrank_internship.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - FlyRank AI Machine Learning Internship Certificate</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/contact.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_git_certificate.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - GUVI HCL Git A to Z Certificate</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/about-founder.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_innovilla_internship.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - Innovilla Software Development Internship Certificate</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/author/enoughsudhanshu.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_python_certificate.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - freeCodeCamp Python Developer Certification</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blogs/how-i-built-bhishmaa-erp.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_search.jpeg</image:loc>
+      <image:title>Enough Sudhanshu - Google Search Profile Screenshot</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blogs/flask-cloudflare-deployment.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_search2.jpeg</image:loc>
+      <image:title>Enough Sudhanshu - Google Search Visibility Screenshot</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blogs/postgresql-backup-automation.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_search3.jpeg</image:loc>
+      <image:title>Enough Sudhanshu - Google AI Overview Screenshot</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blogs/scalable-backend-architecture.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_aws_certificate.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - AWS Getting Started with DevOps Certificate</image:title>
+    </image:image>
 
-<url>
-<loc>https://enoughsudhanshu.github.io/blogs/ai-resume-screening-system.html</loc>
-</url>
+    <image:image>
+      <image:loc>https://enoughsudhanshu.github.io/gallery/enoughsudhanshu_git_certificate%281%29.jpeg</image:loc>
+      <image:title>Sudhanshu Pandey - Git and GitHub Certificate</image:title>
+    </image:image>
+  </url>
 
 </urlset>
